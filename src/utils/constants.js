@@ -1,46 +1,50 @@
-export const INTENTS = {
-  BALANCE_INQUIRY: 'balance_inquiry',
-  TRANSACTION_HISTORY: 'transaction_history',
-  MONEY_TRANSFER: 'money_transfer',
-  CARD_ISSUE: 'card_issue',
-  FRAUD_CONCERN: 'fraud_concern',
-  LOCATION_SERVICE: 'location_service',
-  BILL_PAYMENT: 'bill_payment',
-  LOAN_INQUIRY: 'loan_inquiry',
-  FINANCIAL_ADVICE: 'financial_advice',
-  CUSTOMER_SUPPORT: 'customer_support',
-  UNKNOWN: 'unknown'
+export const BANK_CONFIG = {
+  name: 'SecureBank',
+  theme: {
+    primary: 'blue',
+    secondary: 'gray'
+  },
+  features: {
+    voice: true,
+    analytics: true,
+    investments: true,
+    loans: true,
+    insurance: true
+  }
 };
 
-export const ACCOUNT_TYPES = {
-  CHECKING: 'checking',
-  SAVINGS: 'savings',
-  CREDIT: 'credit'
+export const AI_PROVIDERS = {
+  OPENAI: 'openai',
+  ANTHROPIC: 'anthropic',
+  ENSEMBLE: 'ensemble'
 };
 
-export const SENTIMENT_TYPES = {
-  POSITIVE: 'positive',
-  NEGATIVE: 'negative',
-  NEUTRAL: 'neutral'
+export const DEMO_USER = {
+  username: 'John Doe',
+  email: 'john.doe@email.com',
+  accountNumber: '****1234',
+  balance: 15750.50,
+  savingsBalance: 5230.25,
+  creditScore: 742
 };
 
-export const MESSAGE_TYPES = {
-  USER: 'user',
-  BOT: 'bot',
-  SYSTEM: 'system'
-};
-
-export const QUICK_ACTIONS = [
-  { icon: 'DollarSign', label: 'Check Balance', intent: INTENTS.BALANCE_INQUIRY },
-  { icon: 'CreditCard', label: 'Recent Transactions', intent: INTENTS.TRANSACTION_HISTORY },
-  { icon: 'MapPin', label: 'Find ATM', intent: INTENTS.LOCATION_SERVICE },
-  { icon: 'Phone', label: 'Customer Support', intent: INTENTS.CUSTOMER_SUPPORT },
-  { icon: 'AlertCircle', label: 'Block Card', intent: INTENTS.CARD_ISSUE }
-];
-
-export const AI_CONFIG = {
-  PROCESSING_DELAY: 800,
-  TYPING_DELAY: 1200,
-  CONFIDENCE_THRESHOLD: 0.1,
-  MAX_ENTITIES: 10
+export const QUICK_REPLIES = {
+  INITIAL: [
+    "🔐 Login Demo (john.doe)",
+    "💰 Check Balance",
+    "💼 Investment Options",
+    "📊 Financial Planning", 
+    "📈 Credit Score Tips",
+    "🏠 Loan Options",
+    "🎤 Voice Demo"
+  ],
+  AUTHENTICATED: [
+    'Show Account Summary',
+    'Investment Options',
+    'Financial Planning',
+    'Credit Score Tips',
+    'Loan Options',
+    'Recent Transactions',
+    'AI Recommendations'
+  ]
 };
